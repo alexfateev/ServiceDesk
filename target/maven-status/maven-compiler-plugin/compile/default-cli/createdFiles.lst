@@ -1,3 +1,6 @@
+himmash\local\model\Division.class
+himmash\local\MainApp.class
+himmash\local\model\polk.class
+himmash\local\model\Epmployee.class
 module-info.class
-org\example\MainApp.class
-org\example\SystemInfo.class
+himmash\local\SystemInfo.class
