@@ -2,6 +2,6 @@ module ServiceDesk {
     requires javafx.controls;
     requires javafx.base;
 
-    opens org.example to javafx.fxml;
-    exports org.example;
+    opens himmash.local to javafx.fxml;
+    exports himmash.local;
 }

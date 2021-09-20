@@ -1,4 +1,4 @@
-package org.example;
+package himmash.local;
 
 public class SystemInfo {
 
