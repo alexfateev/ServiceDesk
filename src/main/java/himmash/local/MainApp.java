@@ -1,8 +1,12 @@
 package himmash.local;
 
+import himmash.local.database.DBHandler;
+import himmash.local.utils.CustomAlert;
+import himmash.local.utils.SystemInfo;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -16,6 +20,10 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) {
+
+        DBHandler dbHandler = new DBHandler();
+        dbHandler.getConnection(false);
+        CustomAlert.showAlert(Alert.AlertType.ERROR,null,"Text of error",true);
 
         var javaVersion = SystemInfo.javaVersion();
         var javafxVersion = SystemInfo.javafxVersion();

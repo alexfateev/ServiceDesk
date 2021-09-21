@@ -1,4 +1,4 @@
-package himmash.local;
+package himmash.local.utils;
 
 public class SystemInfo {
 
