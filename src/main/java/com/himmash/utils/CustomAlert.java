@@ -1,6 +1,6 @@
-package himmash.local.utils;
+package com.himmash.utils;
 
-import himmash.local.database.Const;
+import com.himmash.database.Const;
 import javafx.scene.control.Alert;
 
 public class CustomAlert {

@@ -1,4 +1,4 @@
-package himmash.local.database;
+package com.himmash.database;
 
 public class Config {
     public static final String dbHost = "192.168.128.60";

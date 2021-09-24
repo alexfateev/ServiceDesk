@@ -1,4 +1,4 @@
-package himmash.local.utils;
+package com.himmash.utils;
 
 import java.io.File;
 import java.io.IOException;

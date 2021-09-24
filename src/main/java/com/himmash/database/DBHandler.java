@@ -1,10 +1,8 @@
-package himmash.local.database;
+package com.himmash.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
-import static himmash.local.database.Config.*;
 
 public class DBHandler {
     private Connection connection = null;
@@ -12,8 +10,8 @@ public class DBHandler {
     public Connection getConnection(boolean autoCommit) {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection("jdbc:mysql://" + dbHost + ":" + dbPort +
-                    "/" + dbName + dbParam, dbUser, dbPass);
+            connection = DriverManager.getConnection("jdbc:mysql://" + Config.dbHost + ":" + Config.dbPort +
+                    "/" + Config.dbName + Config.dbParam, Config.dbUser, Config.dbPass);
             connection.setAutoCommit(autoCommit);
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
