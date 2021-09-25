@@ -1,12 +1,14 @@
 package com.himmash.dao;
 
+import com.himmash.model.Division;
 import com.himmash.model.Employee;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
-public class EmployeeDbDAO implements EmployeeDAO {
+public class EmployeeDbDAO implements EmployeeDAO, DivisionDAO {
 
     private static final String SELECT = "";
     private static final String SELECT_ONE = "";
@@ -42,6 +44,31 @@ public class EmployeeDbDAO implements EmployeeDAO {
 
     @Override
     public List<Employee> findEmployee() {
+        return null;
+    }
+
+    @Override
+    public Long addDivision(Division division) {
+        return null;
+    }
+
+    @Override
+    public void updateDivision(Division division) {
+
+    }
+
+    @Override
+    public void deleteDivision(Long divisionId) {
+
+    }
+
+    @Override
+    public Division getDivision(Long divisionId) {
+        return null;
+    }
+
+    @Override
+    public ArrayList<Division> findDivision() {
         return null;
     }
 }
