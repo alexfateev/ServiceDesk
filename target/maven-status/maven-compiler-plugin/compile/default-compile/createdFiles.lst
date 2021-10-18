@@ -1,5 +1,6 @@
 com\himmash\dao\SimpleConnectionBuilder.class
 com\himmash\alex\Manufacturer.class
+com\himmash\dao\DivisionDAO.class
 com\himmash\model\Division.class
 com\himmash\alex\Vendor.class
 com\himmash\model\polk.class
@@ -8,6 +9,7 @@ com\himmash\utils\CustomAlert.class
 com\himmash\utils\SystemInfo.class
 com\himmash\dao\EmployeeDbDAO.class
 com\himmash\database\Const.class
+com\himmash\utils\Config.class
 com\himmash\dao\EmployeeDAO.class
 com\himmash\utils\Log.class
 com\himmash\dao\ConnectionBuilder.class
@@ -16,4 +18,3 @@ com\himmash\MainApp.class
 com\himmash\model\Employee.class
 com\himmash\alex\EquipmentType.class
 com\himmash\alex\Equipment.class
-com\himmash\database\Config.class
