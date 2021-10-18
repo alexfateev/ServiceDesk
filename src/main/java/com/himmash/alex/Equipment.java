@@ -1,7 +1,11 @@
 package com.himmash.alex;
 
 
-import javafx.beans.property.*;
+import com.himmash.model.Employee;
+import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.LongProperty;
+import javafx.beans.property.ObjectProperty;
+import javafx.beans.property.StringProperty;
 
 /*
 Класс описывающий оборудование: наименование, тип оборудования, серийный номер, инв. номер и прочее
@@ -16,5 +20,8 @@ public class Equipment {
     private StringProperty cardNumber;
     private StringProperty comment;
     private BooleanProperty disable;
+    private ObjectProperty documentSupply;
+    private ObjectProperty documentWriteOff;
+    private ObjectProperty<Employee> employee;
 
 }
