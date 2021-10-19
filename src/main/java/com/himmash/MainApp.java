@@ -1,12 +1,9 @@
 package com.himmash;
 
-import com.himmash.database.DBHandler;
-import com.himmash.utils.CustomAlert;
 import com.himmash.utils.SystemInfo;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -14,7 +11,7 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import static com.himmash.database.Const.titleApp;
+import static com.himmash.utils.Const.titleApp;
 
 public class MainApp extends Application {
 

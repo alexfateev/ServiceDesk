@@ -1,6 +1,5 @@
 package com.himmash.utils;
 
-import com.himmash.database.Const;
 import javafx.scene.control.Alert;
 
 public class CustomAlert {
