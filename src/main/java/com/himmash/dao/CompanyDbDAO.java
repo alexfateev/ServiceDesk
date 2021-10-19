@@ -1,13 +1,12 @@
 package com.himmash.dao;
 
-import com.himmash.model.Employee;
+import com.himmash.model.Company;
 
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class EmployeeDbDAO implements EmployeeDAO {
-
+public class CompanyDbDAO implements CompanyDAO {
     private static final String SELECT = "";
     private static final String SELECT_ONE = "";
     private static final String INSERT = "";
@@ -21,29 +20,27 @@ public class EmployeeDbDAO implements EmployeeDAO {
     }
 
     @Override
-    public Long addEmployee(Employee employee) {
+    public long insertCompany(Company company) {
+        return 0;
+    }
+
+    @Override
+    public void updateCompany(Company company) {
+
+    }
+
+    @Override
+    public void deleteCompany(Company company) {
+
+    }
+
+    @Override
+    public void getCompany(Company company) {
+
+    }
+
+    @Override
+    public ArrayList<Company> findCompany() {
         return null;
     }
-
-    @Override
-    public void updateEmployee(Employee employee) {
-
-    }
-
-    @Override
-    public void deleteEmployee(Employee employeeId) {
-
-    }
-
-    @Override
-    public Employee getEmployee(Employee employeeId) {
-        return null;
-    }
-
-    @Override
-    public ArrayList<Employee> findEmployee() {
-        return null;
-    }
-
-
 }

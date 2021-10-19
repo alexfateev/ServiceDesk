@@ -2,7 +2,7 @@ package com.himmash.dao;
 
 import com.himmash.model.Employee;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public interface EmployeeDAO {
     //Добавление сотрудника - возвращает ID добавленного сотрудника
@@ -12,11 +12,11 @@ public interface EmployeeDAO {
     public void updateEmployee(Employee employee);
 
     //Удаление сотрудника по его ID
-    public void deleteEmployee(Long employeeId);
+    public void deleteEmployee(Employee employeeId);
 
     //Получение сотрудника
-    public Employee getEmployee(Long employeeId);
+    public Employee getEmployee(Employee employeeId);
 
     //Получение списка сотрудников
-    public List<Employee> findEmployee();
+    public ArrayList<Employee> findEmployee();
 }

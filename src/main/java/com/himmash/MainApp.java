@@ -21,9 +21,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) {
 
-        DBHandler dbHandler = new DBHandler();
-        dbHandler.getConnection(false);
-        CustomAlert.showAlert(Alert.AlertType.ERROR,null,"Text of error",true);
+//        CustomAlert.showAlert(Alert.AlertType.ERROR,null,"Text of error",true);
 
         var javaVersion = SystemInfo.javaVersion();
         var javafxVersion = SystemInfo.javafxVersion();

@@ -32,4 +32,6 @@ public class Config {
     public static final String dbPass = "";
     public static final String dbParam = "?useUnicode=true&serverTimezone=UTC";
 
+    public static final String dbUrl = "jdbc:mysql://" + dbHost + ":" + dbPort + "/" + dbName + dbParam;
+
 }
