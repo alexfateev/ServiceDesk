@@ -5,11 +5,13 @@ import javafx.beans.property.LongProperty;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.StringProperty;
 
+import java.time.LocalDate;
+
 public class Employee {
     private StringProperty fistName;
     private StringProperty lastName;
     private StringProperty middleName;
-    //дата рождения
+    private ObjectProperty<LocalDate> dob;
     private StringProperty position;
     private StringProperty phoneMobile;
     private StringProperty phoneLocal;
