@@ -1,5 +1,7 @@
 package com.himmash;
 
+import com.himmash.dao.CompanyDbDAO;
+import com.himmash.model.Company;
 import com.himmash.utils.SystemInfo;
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -18,7 +20,10 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) {
 
-//        CustomAlert.showAlert(Alert.AlertType.ERROR,null,"Text of error",true);
+//        CompanyDbDAO dao = new CompanyDbDAO();
+//        Company company = new Company();
+//        company.setName("ООО Курганхиммаш");
+//        dao.insertCompany(company);
 
         var javaVersion = SystemInfo.javaVersion();
         var javafxVersion = SystemInfo.javafxVersion();

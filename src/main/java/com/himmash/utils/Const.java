@@ -14,4 +14,8 @@ public class Const {
 
     public static final String TABLE_DOC_SUPPLY = "documentSupply";
     public static final String TABLE_DOC_SUPPLY_LIST = "documentSupplyList";
+
+    public static final String COMPANY_ID = "com_id";
+    public static final String COMPANY_NAME = "com_name";
+    public static final String COMPANY_DISABLE = "com_disable";
 }

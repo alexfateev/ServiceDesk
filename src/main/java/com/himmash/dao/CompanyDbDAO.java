@@ -1,15 +1,16 @@
 package com.himmash.dao;
 
 import com.himmash.model.Company;
+import com.himmash.utils.Const;
+import com.himmash.utils.Utils;
 
-import java.sql.Connection;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 
 public class CompanyDbDAO implements CompanyDAO {
     private static final String SELECT = "";
     private static final String SELECT_ONE = "";
-    private static final String INSERT = "";
+    private static final String INSERT = "INSERT INTO " + Const.TABLE_COMPANY + " (" + Const.COMPANY_NAME + "," + Const.COMPANY_DISABLE + ") VALUES(?,?)";
     private static final String UPDATE = "";
     private static final String DELETE = "";
 
@@ -21,7 +22,17 @@ public class CompanyDbDAO implements CompanyDAO {
 
     @Override
     public long insertCompany(Company company) {
-        return 0;
+        long result = -1L;
+        try(PreparedStatement ps = getConnection().prepareStatement(INSERT, Statement.RETURN_GENERATED_KEYS)){
+            ps.setString(1, company.getName());
+            ps.setInt(2, Utils.boolToByte(company.isDisable()));
+            ResultSet rs = ps.executeQuery();
+            rs.next();
+            result  = rs.getLong(1);
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return result;
     }
 
     @Override
