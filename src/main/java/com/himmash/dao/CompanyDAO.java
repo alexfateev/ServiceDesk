@@ -11,7 +11,7 @@ public interface CompanyDAO {
 
     public void deleteCompany(Company company);
 
-    public void getCompany(Company company);
+    public Company getCompany(Company company);
 
     public ArrayList<Company> findCompany();
 }

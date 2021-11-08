@@ -18,4 +18,10 @@ public class Const {
     public static final String COMPANY_ID = "com_id";
     public static final String COMPANY_NAME = "com_name";
     public static final String COMPANY_DISABLE = "com_disable";
+
+    public static final String DIVISION_ID = "div_id";
+    public static final String DIVISION_PID = "div_pid";
+    public static final String DIVISION_NAME = "div_name";
+    public static final String DIVISION_COMPANY_ID = "div_com_id";
+    public static final String DIVISION_DISABLE = "div_disable";
 }

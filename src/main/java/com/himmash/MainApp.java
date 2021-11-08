@@ -1,7 +1,9 @@
 package com.himmash;
 
 import com.himmash.dao.CompanyDbDAO;
+import com.himmash.dao.SimpleConnectionBuilder;
 import com.himmash.model.Company;
+import com.himmash.model.Equipment;
 import com.himmash.utils.SystemInfo;
 import javafx.application.Application;
 import javafx.geometry.Pos;
@@ -12,18 +14,16 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
+
+import java.sql.SQLException;
 
 import static com.himmash.utils.Const.titleApp;
 
 public class MainApp extends Application {
 
     @Override
-    public void start(Stage stage) {
-
-//        CompanyDbDAO dao = new CompanyDbDAO();
-//        Company company = new Company();
-//        company.setName("ООО Курганхиммаш");
-//        dao.insertCompany(company);
+    public void start(Stage stage) throws SQLException {
 
         var javaVersion = SystemInfo.javaVersion();
         var javafxVersion = SystemInfo.javafxVersion();

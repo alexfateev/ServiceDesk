@@ -1,4 +1,4 @@
-package com.himmash.controller;
+package com.himmash.service;
 
 import com.himmash.dao.DivisionDAO;
 import com.himmash.dao.DivisionDbDAO;
