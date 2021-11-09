@@ -22,9 +22,17 @@ public class DocSupply {
     private StringProperty name;
     private StringProperty commet;
     private LongProperty id;
-    private LongProperty pid;
     private BooleanProperty saved;
     private ObjectProperty<LocalDate> date;
+
+    public DocSupply(StringProperty vendor, StringProperty name, StringProperty commet, LongProperty id, BooleanProperty saved, ObjectProperty<LocalDate> date) {
+        this.vendor = vendor;
+        this.name = name;
+        this.commet = commet;
+        this.id = id;
+        this.saved = saved;
+        this.date = date;
+    }
 
     public String getVendor() {
         return vendor.get();
@@ -74,19 +82,7 @@ public class DocSupply {
         this.id.set(id);
     }
 
-    public long getPid() {
-        return pid.get();
-    }
-
-    public LongProperty pidProperty() {
-        return pid;
-    }
-
-    public void setPid(long pid) {
-        this.pid.set(pid);
-    }
-
-    public boolean isSaved() {
+       public boolean isSaved() {
         return saved.get();
     }
 

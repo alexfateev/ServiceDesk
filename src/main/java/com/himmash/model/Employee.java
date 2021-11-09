@@ -16,6 +16,22 @@ public class Employee {
     private StringProperty phoneMobile;
     private StringProperty phoneLocal;
 
+    public Employee(StringProperty fistName, StringProperty lastName, StringProperty middleName, ObjectProperty<LocalDate> dob, StringProperty position, StringProperty phoneMobile, StringProperty phoneLocal, StringProperty phoneCity, StringProperty email, ObjectProperty<Division> division, StringProperty comment, LongProperty id, BooleanProperty disable) {
+        this.fistName = fistName;
+        this.lastName = lastName;
+        this.middleName = middleName;
+        this.dob = dob;
+        this.position = position;
+        this.phoneMobile = phoneMobile;
+        this.phoneLocal = phoneLocal;
+        this.phoneCity = phoneCity;
+        this.email = email;
+        this.division = division;
+        this.comment = comment;
+        this.id = id;
+        this.disable = disable;
+    }
+
     public String getFistName() {
         return fistName.get();
     }
