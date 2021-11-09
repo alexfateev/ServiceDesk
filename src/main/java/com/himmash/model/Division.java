@@ -2,7 +2,7 @@ package com.himmash.model;
 
 import javafx.beans.property.*;
 
-// подразделение
+// подразделение t,fyf 
 public class Division {
     private StringProperty name;
     private StringProperty comment;
