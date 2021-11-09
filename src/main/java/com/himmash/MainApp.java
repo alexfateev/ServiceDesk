@@ -24,7 +24,7 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) throws SQLException {
-
+    test();
         var javaVersion = SystemInfo.javaVersion();
         var javafxVersion = SystemInfo.javafxVersion();
 
@@ -42,6 +42,16 @@ public class MainApp extends Application {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void test(){
+        Company myCompany = new Company();
+        myCompany.setName("Company name");
+        System.out.println("Name: "+myCompany.getName());
+
+        Company company = new Company(0,"New name",false);
+        System.out.println("Name: "+company.getName());
+    }
+
 
     public static void main(String[] args) {
         launch();
