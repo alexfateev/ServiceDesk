@@ -19,7 +19,7 @@ public class Equipment {
     private StringProperty inventorynumber;
     private StringProperty cardnumber;
 
-    public Equipment(ObjectProperty<EquipmentType> equipmentType, StringProperty description, StringProperty serialnumber, StringProperty inventorynumber, StringProperty cardnumber, StringProperty comment, LongProperty id, BooleanProperty disable) {
+    public Equipment() {
         this.equipmentType = equipmentType;
         this.description = description;
         this.serialnumber = serialnumber;

@@ -25,7 +25,7 @@ public class DocSupply {
     private BooleanProperty saved;
     private ObjectProperty<LocalDate> date;
 
-    public DocSupply(StringProperty vendor, StringProperty name, StringProperty commet, LongProperty id, BooleanProperty saved, ObjectProperty<LocalDate> date) {
+    public DocSupply() {
         this.vendor = vendor;
         this.name = name;
         this.commet = commet;

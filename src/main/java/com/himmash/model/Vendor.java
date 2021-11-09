@@ -21,7 +21,7 @@ public class Vendor {
     private StringProperty comment;
     private BooleanProperty disable;
 
-    public Vendor(StringProperty name, StringProperty contact, StringProperty adress, StringProperty comment, BooleanProperty disable) {
+    public Vendor() {
         this.name = name;
         this.contact = contact;
         this.adress = adress;

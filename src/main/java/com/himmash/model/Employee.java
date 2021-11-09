@@ -16,7 +16,7 @@ public class Employee {
     private StringProperty phoneMobile;
     private StringProperty phoneLocal;
 
-    public Employee(StringProperty fistName, StringProperty lastName, StringProperty middleName, ObjectProperty<LocalDate> dob, StringProperty position, StringProperty phoneMobile, StringProperty phoneLocal, StringProperty phoneCity, StringProperty email, ObjectProperty<Division> division, StringProperty comment, LongProperty id, BooleanProperty disable) {
+    public Employee() {
         this.fistName = fistName;
         this.lastName = lastName;
         this.middleName = middleName;

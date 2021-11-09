@@ -13,7 +13,7 @@ public class EquipmentType {
     private LongProperty id;
     private StringProperty name;
 
-    public EquipmentType(LongProperty id, StringProperty name) {
+    public EquipmentType() {
         this.id = id;
         this.name = name;
     }
