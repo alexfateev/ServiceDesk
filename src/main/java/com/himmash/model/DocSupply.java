@@ -1,9 +1,6 @@
 package com.himmash.model;
 
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.LongProperty;
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 
 import java.time.LocalDate;
 
@@ -26,12 +23,12 @@ public class DocSupply {
     private ObjectProperty<LocalDate> date;
 
     public DocSupply() {
-        this.vendor = vendor;
-        this.name = name;
-        this.commet = commet;
-        this.id = id;
-        this.saved = saved;
-        this.date = date;
+        this.vendor = new SimpleStringProperty("");
+        this.name = new SimpleStringProperty("");
+        this.commet = new SimpleStringProperty("");
+        this.id = new SimpleLongProperty( -1L);
+        this.saved = new SimpleBooleanProperty(false);
+
     }
 
     public String getVendor() {

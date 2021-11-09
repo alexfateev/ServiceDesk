@@ -1,6 +1,8 @@
 package com.himmash.model;
 
 import javafx.beans.property.BooleanProperty;
+import javafx.beans.property.SimpleBooleanProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class Vendor {
@@ -22,11 +24,11 @@ public class Vendor {
     private BooleanProperty disable;
 
     public Vendor() {
-        this.name = name;
-        this.contact = contact;
-        this.adress = adress;
-        this.comment = comment;
-        this.disable = disable;
+        this.name = new SimpleStringProperty("");
+        this.contact = new SimpleStringProperty("");
+        this.adress = new SimpleStringProperty("");
+        this.comment = new SimpleStringProperty("");
+        this.disable = new SimpleBooleanProperty( false);
     }
 
     public String getName() {
