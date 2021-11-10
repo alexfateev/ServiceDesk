@@ -13,8 +13,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="924.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="638.0" prefWidth="924.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.himmash.controller.HandbookController">
    <center>
       <SplitPane dividerPositions="0.2668112798264642" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <items>
@@ -46,7 +45,7 @@
    <top>
       <HBox fx:id="toolbar" alignment="CENTER_LEFT" prefHeight="35.0" prefWidth="924.0" spacing="3.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnrefresh" mnemonicParsing="false" text="Обновить" />
+            <Button fx:id="btnRefresh" mnemonicParsing="false" text="Обновить" />
             <MenuButton fx:id="btnDivision" mnemonicParsing="false" text="Подразделения">
               <items>
                 <MenuItem mnemonicParsing="false" text="Action 1" />

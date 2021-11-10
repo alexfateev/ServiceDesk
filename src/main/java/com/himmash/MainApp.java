@@ -6,6 +6,7 @@ import com.himmash.model.Company;
 import com.himmash.model.Equipment;
 import com.himmash.utils.SystemInfo;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -16,6 +17,7 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 import static com.himmash.utils.Const.titleApp;
@@ -23,8 +25,7 @@ import static com.himmash.utils.Const.titleApp;
 public class MainApp extends Application {
 
     @Override
-    public void start(Stage stage) throws SQLException {
-    test();
+    public void start(Stage stage) throws SQLException, IOException {
         var javaVersion = SystemInfo.javaVersion();
         var javafxVersion = SystemInfo.javafxVersion();
 
@@ -37,24 +38,22 @@ public class MainApp extends Application {
         vBox.getChildren().addAll(image, label);
         var scene = new Scene(new StackPane(vBox), 640, 480);
 
-        stage.getIcons().add(new Image("file:resources/cat-laptop-icon.png"));
-        stage.setTitle(titleApp);
-        stage.setScene(scene);
-        stage.show();
+       initRoot(stage);
+//        stage.setScene(scene);
+//        stage.show();
+
     }
-
-    public void test(){
-        Company myCompany = new Company();
-        myCompany.setName("Company name");
-        System.out.println("Name: "+myCompany.getName());
-
-        Company company = new Company(0,"New name",false);
-        System.out.println("Name: "+company.getName());
-    }
-
 
     public static void main(String[] args) {
         launch();
+    }
+
+    public void initRoot(Stage mainApp) throws IOException {
+        Scene scene1 = new Scene(new FXMLLoader().load(MainApp.class.getResource("file:resources/view/Main.fxml")));
+        mainApp.getIcons().add(new Image("file:resources/cat-laptop-icon.png"));
+        mainApp.setTitle(titleApp);
+        mainApp.setScene(scene1);
+        mainApp.show();
     }
 
 }

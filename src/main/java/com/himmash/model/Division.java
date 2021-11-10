@@ -9,6 +9,10 @@ public class Division {
     private LongProperty id;
     private LongProperty pid;
     private BooleanProperty disable;
+    private BooleanProperty sync1c;
+    private StringProperty sync1cID;
+    private  StringProperty sync1cPID;
+    private StringProperty sync1cName;
 
     public Division() {
         this.name = new SimpleStringProperty("");
@@ -16,6 +20,58 @@ public class Division {
         this.id = new SimpleLongProperty(0);
         this.pid = new SimpleLongProperty(0);
         this.disable = new SimpleBooleanProperty(false);
+        this.sync1c = new SimpleBooleanProperty(false);
+        this.sync1cID = new SimpleStringProperty("");
+        this.sync1cPID = new SimpleStringProperty("");
+        this.sync1cName = new SimpleStringProperty("");
+    }
+
+    public boolean isSync1c() {
+        return sync1c.get();
+    }
+
+    public BooleanProperty sync1cProperty() {
+        return sync1c;
+    }
+
+    public void setSync1c(boolean sync1c) {
+        this.sync1c.set(sync1c);
+    }
+
+    public String getSync1cID() {
+        return sync1cID.get();
+    }
+
+    public StringProperty sync1cIDProperty() {
+        return sync1cID;
+    }
+
+    public void setSync1cID(String sync1cID) {
+        this.sync1cID.set(sync1cID);
+    }
+
+    public String getSync1cPID() {
+        return sync1cPID.get();
+    }
+
+    public StringProperty sync1cPIDProperty() {
+        return sync1cPID;
+    }
+
+    public void setSync1cPID(String sync1cPID) {
+        this.sync1cPID.set(sync1cPID);
+    }
+
+    public String getSync1cName() {
+        return sync1cName.get();
+    }
+
+    public StringProperty sync1cNameProperty() {
+        return sync1cName;
+    }
+
+    public void setSync1cName(String sync1cName) {
+        this.sync1cName.set(sync1cName);
     }
 
     public Division(String name, String comment, long id, long pid, boolean disable) {
