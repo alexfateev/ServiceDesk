@@ -1,9 +1,6 @@
 package com.himmash.model;
 
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.LongProperty;
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 
 import java.time.LocalDate;
 
@@ -17,9 +14,9 @@ public class Employee {
     private StringProperty phoneLocal;
 
     public Employee() {
-        this.fistName = fistName;
-        this.lastName = lastName;
-        this.middleName = middleName;
+        this.fistName = new SimpleStringProperty("");
+        this.lastName = new SimpleStringProperty("");
+        this.middleName = new SimpleStringProperty("");
         this.dob = dob;
         this.position = position;
         this.phoneMobile = phoneMobile;
