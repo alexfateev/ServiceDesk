@@ -12,21 +12,27 @@ public class Employee {
     private StringProperty position;
     private StringProperty phoneMobile;
     private StringProperty phoneLocal;
+    private StringProperty phoneCity;
+    private StringProperty email;
+    private ObjectProperty<Division> division;
+    private StringProperty comment;
+    private LongProperty id;
+    private BooleanProperty disable;
+
 
     public Employee() {
-        this.fistName = new SimpleStringProperty("");
+        this.fistName = new SimpleStringProperty ("");
         this.lastName = new SimpleStringProperty("");
         this.middleName = new SimpleStringProperty("");
-        this.dob = dob;
-        this.position = position;
-        this.phoneMobile = phoneMobile;
-        this.phoneLocal = phoneLocal;
-        this.phoneCity = phoneCity;
-        this.email = email;
-        this.division = division;
-        this.comment = comment;
-        this.id = id;
-        this.disable = disable;
+        this.position = new SimpleStringProperty("");
+        this.phoneMobile = new SimpleStringProperty("");
+        this.phoneLocal = new SimpleStringProperty("");
+        this.phoneCity = new SimpleStringProperty("");
+        this.email = new SimpleStringProperty("");
+        this.division = new SimpleObjectProperty<Division>(new Division());
+        this.comment = new SimpleStringProperty("");
+        this.id = new SimpleLongProperty(-1L);
+        this.disable = new SimpleBooleanProperty(false);
     }
 
     public String getFistName() {
@@ -184,12 +190,5 @@ public class Employee {
     public void setDisable(boolean disable) {
         this.disable.set(disable);
     }
-
-    private StringProperty phoneCity;
-    private StringProperty email;
-    private ObjectProperty<Division> division;
-    private StringProperty comment;
-    private LongProperty id;
-    private BooleanProperty disable;
 
 }

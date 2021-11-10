@@ -1,6 +1,8 @@
 package com.himmash.model;
 
 import javafx.beans.property.LongProperty;
+import javafx.beans.property.SimpleLongProperty;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
 public class EquipmentType {
@@ -14,8 +16,8 @@ public class EquipmentType {
     private StringProperty name;
 
     public EquipmentType() {
-        this.id = id;
-        this.name = name;
+        this.id = new SimpleLongProperty( -1L);
+        this.name = new SimpleStringProperty( "");
     }
 
     public long getId() {

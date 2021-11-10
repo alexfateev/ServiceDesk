@@ -1,9 +1,6 @@
 package com.himmash.model;
 
-import javafx.beans.property.BooleanProperty;
-import javafx.beans.property.LongProperty;
-import javafx.beans.property.ObjectProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 
 import java.time.LocalDate;
 
@@ -18,16 +15,19 @@ public class Equipment {
     private StringProperty serialnumber;
     private StringProperty inventorynumber;
     private StringProperty cardnumber;
+    private StringProperty comment;
+    private LongProperty id;
+    private BooleanProperty disable;
 
     public Equipment() {
-        this.equipmentType = equipmentType;
-        this.description = description;
-        this.serialnumber = serialnumber;
-        this.inventorynumber = inventorynumber;
-        this.cardnumber = cardnumber;
-        this.comment = comment;
-        this.id = id;
-        this.disable = disable;
+        this.equipmentType = new SimpleObjectProperty<EquipmentType>(new EquipmentType());
+        this.description = new SimpleStringProperty("");
+        this.serialnumber = new SimpleStringProperty( "");
+        this.inventorynumber = new SimpleStringProperty("");
+        this.cardnumber = new SimpleStringProperty("");
+        this.comment = new SimpleStringProperty("");
+        this.id = new SimpleLongProperty(-1L);
+        this.disable = new SimpleBooleanProperty(false);
     }
 
     public EquipmentType getEquipmentType() {
@@ -126,7 +126,5 @@ public class Equipment {
         this.disable.set(disable);
     }
 
-    private StringProperty comment;
-    private LongProperty id;
-    private BooleanProperty disable;
+
 }
